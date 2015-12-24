@@ -1,0 +1,220 @@
+/* 
+* @Author: Administrator
+* @Date:   2015-12-21 15:43:50
+* @Last Modified by:   Administrator
+* @Last Modified time: 2015-12-22 15:38:06
+*/
+*{
+	margin:0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+html{
+	height: 100%;
+	overflow: hidden;
+}
+#main{
+	width: 640px;
+	height: 1008px;
+	position: absolute;
+	left:50%;
+	top: 0;
+	margin-left: -320px;
+	-webkit-transform-origin: top;
+}
+#loading,.phone,.message,.cube{
+	position: absolute;
+}
+#loading{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 10;
+}
+.load-box{
+	background: #fff;
+	border-radius: 10px;
+	position: absolute;
+	width: 70%;
+	height: 40px;
+	top: 40%;
+	overflow: hidden;
+	left: 15%;
+
+}
+.load-inner{
+	width: 0;
+	height: 40px;
+	background-image: -webkit-linear-gradient(45deg,#29f659 25%,#6cfd8e 50%,#29f659 75%,#6cfd8e 100%);
+	background-repeat: repeat-x;
+	background-size: 40px 40px;
+	-webkit-transition: 1s;
+}
+.phone{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/phoneBg.jpg);
+	background-repeat:no-repeat;
+	z-index: 9;
+	-webkit-transition: 1s;
+}
+.phonebg1,.phonebg2{
+	width: 100%;
+	position: absolute;
+	bottom: 35px;
+	left:0;
+}
+.phonebg1{
+	height: 360px;
+	background: url(../images/phoneBtn.png) center center no-repeat;
+}
+.phonebg2{
+	height: 659px;
+	background: url(../images/phoneKey.png) center center no-repeat;
+	-webkit-transform: translate(0,700px);
+	-webkit-transition: 0.8s;
+}
+.click,.receive,.reject{
+	width: 170px;
+	height: 170px;
+	border-radius: 50%;
+	position: absolute;
+	top: 146px;
+	right: 47px;
+}
+.click{
+	-webkit-animation: animate1 1s ease-out infinite;
+	border:2px solid #0f0;
+	z-index: -1;
+}
+.reject{
+	left: 47px;
+}
+@-webkit-keyframes animate1{
+	from{
+		-webkit-transform: scale(1.2);
+	}
+	to{
+		-webkit-transform: scale(0.6);
+		opacity: 0;
+	}
+}
+.close{
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	top:484px;
+	left:250px;
+}
+#message{
+	width: 100%;
+	height: 100%;
+	background: #eaeaea url(../images/messageText.png) bottom center no-repeat;
+	-webkit-transition: 0.2s;
+}
+#message li{
+	margin-bottom: 30px;
+	font-size: 30px;
+	position: relative;
+	padding:18px 26px;
+	border-radius: 5px;
+	clear: both;
+	z-index: 8;
+	opacity: 0;
+	-webkit-transform: translate(0,20px);
+	-webkit-transition: 0.5s;
+}
+.mesg{
+	-webkit-transition: 0.5s;
+}
+.left{
+	float: left;
+    border: 2px #cacaca solid;
+    background: #fff;
+	margin-left: 100px;
+}
+.left img:nth-child(1){
+	position: absolute;
+	left: -100px;
+	top: -2px;
+}
+.left img.arrow{
+	position: absolute;
+	left: -10px;
+}
+.right{
+	float: right;
+    background: #a2e45c;
+    border: 2px #96b474 solid;
+	margin-right: 100px;
+}
+.right img.arrow{
+	position: absolute;
+	right: -10px;
+}
+.right img:nth-child(1){
+	position: absolute;
+	right: -100px;
+	top: -2px;
+}
+.cube{
+	width: 100%;
+	height: 100%;
+	background:url(../images/cubeBg.jpg) center center no-repeat;
+	perspective: 800px;
+	z-index: 7;
+}
+.cubebox{
+	width: 510px;
+	height: 510px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	margin-top: -255px;
+	margin-left: -255px;
+	/*opacity: 0;*/
+	transform-style: preserve-3d;
+	transform: scale(0.2) rotateX(-180deg) rotateY(-180deg);
+	-webkit-transition: 1s;
+	-webkit-transform-origin: 255px 255px -255px;
+}
+.cubebox li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.cubebox li:nth-child(1){
+	background: url(../images/cubeImg1.png);
+}
+.cubebox li:nth-child(2){
+	background: url(../images/cubeImg2.png);
+	left: 510px;
+	-webkit-transform: rotateY(90deg);
+	-webkit-transform-origin: left;
+}
+.cubebox li:nth-child(3){
+	background: url(../images/cubeImg3.png);
+	left: -510px;
+	-webkit-transform: rotateY(-90deg);
+	-webkit-transform-origin: right;
+}
+.cubebox li:nth-child(4){
+	background: url(../images/cubeImg4.png);
+	top: -510px;
+	-webkit-transform: rotateX(90deg);
+	-webkit-transform-origin: bottom;
+}
+.cubebox li:nth-child(5){
+	background: url(../images/cubeImg5.png);
+	top: 510px;
+	-webkit-transform: rotateX(-90deg);
+	-webkit-transform-origin: top;
+}
+.cubebox li:nth-child(6){
+	background: url(../images/cubeImg6.png);
+	-webkit-transform: translateZ(-510px);
+}
