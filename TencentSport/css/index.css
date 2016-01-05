@@ -1,0 +1,227 @@
+/* 
+* @Author: Administrator
+* @Date:   2015-12-30 09:07:31
+* @Last Modified by:   Administrator
+* @Last Modified time: 2015-12-30 18:02:59
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+body{
+	font:12px 'Microsoft YaHei',Arial,SimSun;
+	background: #f4f4f4;
+}
+.container{
+	width: 800px;
+	height: 100%;
+	margin:20px auto;
+}
+.canlendarinfo{
+	height: 80px;
+	position: relative;
+	font-size: 18px;
+}
+.leftbtn,.rightbtn{
+	width: 32px;
+	height: 100%;
+	cursor: pointer;
+	top:0;
+	position: absolute;
+}
+.leftbtn{
+	left: 0;
+}
+.rightbtn{
+	right: 0;
+}
+.leftbtn>div,.rightbtn>div{
+	position: absolute;
+	width: 10px;
+	height: 16px;
+	top:50%;
+	left:50%;
+	margin:-8px 0 0 -13px;
+}
+.rightbtn>div{
+	margin:-8px 0 0 -5px;
+}
+.arrow{
+	width: 0;
+	height: 0;
+	border:8px solid transparent;
+	position: absolute;
+}
+.leftbtn .arrowin{
+	border-right-color: #2275bb;
+}
+.leftbtn .arrowout{
+	border-right-color: white;
+	left:2px;
+}
+.rightbtn .arrowin{
+	border-left-color: #2275bb;
+}
+.rightbtn .arrowout{
+	border-left-color:white;
+	left:-2px;
+}
+.leftbtn:hover,.rightbtn:hover{
+	background: #eee;
+}
+.leftbtn:hover .arrowout{
+	border-right-color: #eee;
+}
+.rightbtn:hover .arrowout{
+	border-left-color: #eee;
+}
+.canlendarinfo{	
+	border:1px solid #ececec;
+}
+.canlendarinfo,.gamecontainer{
+	background: white;
+	width: 798px;
+}
+.canlendarlist{
+	margin:0 31px;
+	padding:5px 0;
+	height: 70px;
+	overflow: hidden;
+}
+.calendar{
+	position: relative;
+}
+.calendar li{
+	float: left;
+	width: 81px;
+	height: 70px;
+	margin:0 12px;
+	text-align: center;
+	cursor: pointer;
+}
+.calendar li span{
+	display: inline-block;
+	width: 100%;	
+}
+.calendar-weekday{
+	font-size: 14px;
+	color: #b9b9b9;
+	margin-top: 10px;
+}
+.calendar-date{
+	margin-top: 5px;
+}
+.calendar li:hover{
+	background-color: #e4f0fa;
+}
+.calendar li:hover .calendar-weekday{
+	color: #2275bb;
+}
+.calendar li:hover .calendar-date{
+	color: #2275bb;
+}
+.calendar .cur:hover .calendar-weekday{
+	color: #fff;
+}
+.calendar .cur:hover .calendar-date{
+	color: #fff;
+}
+.game-date{
+	font-weight: 700;
+	line-height: 45px;
+	font-size: 14px;
+	background: #f4f4f4;
+}
+.game-item{
+	font-size: 16px;
+	color: #515151;
+	height: 80px;
+	line-height:80px;
+	background: #fff;
+	border:1px solid #ececec;
+	border-bottom: none;
+}
+.game-item>a{
+	display: inline-block;
+	height: 80px;
+	width: 798px;
+	color: #515151;
+}
+.game-item>a>div{
+	float: left;
+}
+.game-time{
+	font-size: 14px;
+	width: 80px;
+	padding-left: 18px;
+	text-align: left;
+}
+.geme-title{
+	width: 140px;
+	padding:0;
+	font-size: 13px;
+	color: #a0a0a0;
+	text-align: left;
+}
+.game-player{
+	width: 145px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.game-player img{
+	width: 48px;
+	height: 45px;
+	vertical-align: middle;
+}
+.game-score{
+	color: #1b87e2;
+	width: 92px;
+	height: 30px;
+	margin-top: 25px;
+	border-radius: 2px;
+	vertical-align: middle;
+	line-height: 30px;
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	left:-15px;
+}
+.game-item .right{
+	text-align: right;
+	margin:0;
+	position: relative;
+	left: -30px;
+}
+.game-item .video{
+	float: right;
+	width: 125px;
+}
+.video span{
+	background: url(../images/video_post_game_3128c9.png) no-repeat;
+	color: #1c90f2;
+	display: inline-block;
+	padding-left: 23px;
+	margin-left: 32px;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	text-align: center;
+	background-position: left 3px;
+}
+.game-item:hover{
+	background-color:#fafafa;
+}
+.cur{
+	background-color:#1c90f2; 
+}
+.cur span{
+	color: #fff;
+}
+.calendar-li.cur:hover{
+	background-color:#1c90f2;  
+}
