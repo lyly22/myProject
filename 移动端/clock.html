@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+			body{
+				background:#000;
+				color:#fff;
+			}
+			canvas{
+				background:#fff;
+			}
+        </style>
+    </head>
+    <body>
+    	<canvas width='400' height='400'>浏览器不支持canvas</canvas>
+    </body>
+    <script>
+    	var oC=document.getElementsByTagName('canvas')[0];
+    	var oH=oC.getContext("2d");
+    	function draw(){
+    		var x=200;//圆心
+ 			var y=200;//圆心
+ 			var r=150;//半径
+ 			oH.clearRect(0,0,oC.width,oC.height);
+
+ 			var oDate=new Date();
+ 			var hours=oDate.getHours();
+ 			var minutes=oDate.getMinutes();
+ 			var seconds=oDate.getSeconds();
+ 			var hourValue=(-90+hours*30+minutes/2)*Math.PI/180;//一小时30度
+ 			var minutesValue=(-90+minutes*6)*Math.PI/180;//一分钟6度
+ 			var secondsValue=(-90+seconds*6)*Math.PI/180;//一秒钟6度
+			oH.beginPath();
+			oH.strokeStyle='#fb5ea1';
+			for(var i=0;i<60;i++){
+				oH.moveTo(x, y);
+				oH.arc(x,y,r,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false);
+			}
+			oH.closePath();
+			oH.stroke();
+
+			oH.fillStyle='white';
+			oH.beginPath();
+			oH.moveTo(x, y);
+			oH.arc(x,y,r-10,0,360*Math.PI/180,false);
+			oH.closePath();
+			oH.fill();
+
+			oH.lineWidth=3;
+			oH.beginPath();
+			for(var i=0;i<60;i++){
+				oH.moveTo(x, y);
+				oH.arc(x,y,r,30*i*Math.PI/180,30*(i+1)*Math.PI/180,false);
+			}
+			oH.closePath();
+			oH.stroke();
+
+			oH.fillStyle='white';
+			oH.beginPath();
+			oH.moveTo(x, y);
+			oH.arc(x,y,r-20,0,360*Math.PI/180,false);
+			oH.closePath();
+			oH.fill();
+
+			oH.strokeStyle='#fb5e5f';
+			oH.lineWidth=5;
+			oH.beginPath();
+			oH.moveTo(x, y);
+			oH.arc(x,y,r/2,hourValue,hourValue,false);			
+			oH.closePath();
+			oH.stroke();
+			//分
+			oH.strokeStyle='#78fb5e';
+			oH.lineWidth=3;
+			oH.beginPath();
+			oH.moveTo(x, y);
+			oH.arc(x,y,r/1.5,minutesValue,minutesValue,false);			
+			oH.closePath();
+			oH.stroke();
+			//秒
+			oH.strokeStyle='aqua';
+			oH.lineWidth=2;
+			oH.beginPath();
+			oH.moveTo(x, y);
+			oH.arc(x,y,r/1.2,secondsValue,secondsValue,false);			
+			oH.closePath();
+			oH.stroke();
+
+    	}
+    	draw();
+    	setInterval(draw, 1000);
+    </script>
+</html>

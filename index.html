@@ -3,16 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>welcome</title>
+	<style>
+		body{
+			padding-left:30px;
+			font:18px Arial,'微软雅黑';
+		}
+		.color0{
+			color:#FF1A00;
+		}
+		.color1{
+			color:#9900FF;
+		}
+		.color2{
+			color:#FF00E6;
+		}
+	</style>
 </head>
 <body>
-	HI，i am luying! welcome<br /><br /><br /><br />
-	<p><a href="http://lyly22.github.io/myProject/移动端/changjing1.html">场景1</a>（请使用手机查看）</p>
-	<p><a href="http://lyly22.github.io/myProject/移动端/changjing2.html">场景2</a>（请使用手机查看）</p>
-	<p><a href="http://lyly22.github.io/myProject/移动端/animation.html">css3图片展示1</a></p>
-	<p><a href="http://lyly22.github.io/myProject/移动端/css3photoshow.html">css3图片展示2</a>（请使用chrome浏览器查看）</p>
-	<p><a href="http://lyly22.github.io/myProject/移动端/webapp.html">webapp</a>（请使用手机查看）</p>
-	<p><a href="http://lyly22.github.io/myProject/移动端/aliyun.html">响应式</a></p>
-	<p><a href="http://lyly22.github.io/myProject/TencentSport/index.html">腾讯体育ajax+jsonp数据绑定</a></p>
-	<p><a href="http://lyly22.github.io/myProject/2048/index.html">2048游戏--支持电脑键盘控制和手机触控，实现了不同手机尺寸的自适应</a></p>
+	<h2>Hi,I am Luying！welcome</h2><br />
+	<p><a href="http://lyly22.github.io/myProject/TencentSport/index.html" target="_blank">腾讯体育ajax+jsonp数据绑定</a></p>
+	<p><a href="http://lyly22.github.io/myProject/2048/index.html" target="_blank">2048游戏</a>（支持电脑键盘控制和手机触控，实现了不同手机尺寸的自适应）</p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/clock.html" target="_blank">canvas时钟</a></p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/changjing1.html" target="_blank">场景1</a>（请使用手机查看）</p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/changjing2.html" target="_blank">场景2</a>（请使用手机查看）</p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/animation.html" target="_blank">css3图片展示1</a></p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/css3photoshow.html" target="_blank">css3图片展示2</a>（请使用chrome浏览器查看）</p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/webapp.html" target="_blank">webapp</a>（请使用手机查看）</p>
+	<p><a href="http://lyly22.github.io/myProject/移动端/aliyun.html" target="_blank">响应式</a></p>
 </body>
+<script>
+	var a=document.getElementsByTagName('a');
+	for(var i=0;i<a.length;i++){
+		a[i].className='color'+i%3;
+	}
+
+
+</script>
 </html>
