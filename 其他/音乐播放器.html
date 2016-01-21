@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background:url(images/bg.jpg) -600px 0 no-repeat;
+				font-family:'Microsoft Yahei';
+				color:#fff;
+			}
+			.main{
+				width:536px;
+				height:524px;
+				background:url(images/yybw.png) no-repeat;
+				position:absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+			}
+			.bg,.play{
+				position:absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+			}
+			.index{
+				width: 100%;
+				height: 100%;
+				position:relative;
+				z-index:10;
+				text-align:center;
+			}
+			.person-name,.music-name{
+				text-align:center;				
+			}
+			.person-name{
+				font-size:16px;
+				color:#fff;
+				margin-top: 80px;
+			}
+			.music-name{
+				font-size:38px;
+				color:#33cccc;
+			}
+			.music-img{
+				width:120px;
+				height:120px;
+				border-radius:50%;
+				overflow: hidden;
+				position:absolute;
+				top:34%;
+				left:50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+			}
+			.play{
+				display:inline-block;
+				cursor:pointer;
+			}
+			.next{
+				margin-top: 200px;
+				cursor:pointer;
+			}
+			.rotate{
+				-webkit-animation: rotate 4s infinite linear;
+				animation: rotate 4s infinite linear;
+			}
+			@keyframes rotate{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}			
+			@-webkit-keyframes rotate{
+				from{
+					-webkit-transform: rotate(0deg);
+				}
+				to{
+					-webkit-transform: rotate(360deg);
+				}
+			}
+        </style>
+    </head>
+    <body>
+		<div class="main">
+			<img src="images/bg1.png" height="415" width="415" class="bg">
+			<img src="images/bg2.png" height="415" width="417" class="bg">
+			<img src="images/yyjd.png" height="416" width="416" class="bg">
+			<div class="index">				
+				<p class="person-name">龚玥</p>
+				<p class="music-name">母亲</p>
+				<div class="music-img">
+					<img src="images/0.jpg" height="120" width="120" alt="" class="mainimg">
+					<img src="images/play.png" height="54" width="54" alt="" class="play">
+				</div>
+				<img src="images/next.png" height="22" width="19" alt="" class="next">
+				<p>切歌</p>
+			</div>
+		</div>
+		<audio src="music/母亲.mp3"></audio>
+    </body>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    	var personName=['龚玥','张信哲','邓紫棋','Beyond'],
+    		musicName=['母亲','白月光','你把我灌醉','海阔天空'],
+    		play=$('.play')[0],
+    		audio=document.getElementsByTagName('audio')[0],
+    		mainImg=$('.mainimg')[0],
+    		personname=$('.person-name')[0],
+    		musicname=$('.music-name')[0],
+    		next=$('.next')[0],
+    		i=0,
+    		flag=true;
+		play.onclick=function(){
+			if(flag){
+    			this.src='images/pause.png';
+    			mainImg.className='rotate';
+    			audio.play(); 
+    			flag=false;   				
+			}else{
+				this.src='images/play.png'
+    			audio.pause();    
+    			mainImg.className="";	
+    			flag=true;	    					
+			}
+		}
+		next.onclick=function(){
+			i++;
+			if(i>personName.length-1){
+				i=0;
+			}
+			flag=false;
+			audio.src='music/'+musicName[i]+'.mp3';
+			play.src='images/pause.png';
+			mainImg.className='rotate';
+			audio.play();
+			mainImg.src='images/'+i+'.jpg';
+			personname.innerHTML=personName[i];
+			musicname.innerHTML=musicName[i];
+		}
+
+    </script>
+</html>

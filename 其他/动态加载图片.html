@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态加载图片</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{			
+			font-family:'Microsoft Yahei';
+			-webkit-user-select:none;
+		}
+		.banner{
+			width:450px;
+			height:280px;
+			position:relative;
+			margin:160px auto;
+		}
+		.title,.number{
+			width:100%;
+			position:absolute;
+			left:0;
+			text-align:center;
+			line-height:26px;
+			background:rgba(0,0,0,.5);
+			color:#fff;			
+			z-index:9999;
+		}
+		.title{
+			top:0;
+		}
+		.number{
+			bottom:0;
+		}
+		.prev,.next{
+			display:inline-block;
+			width:30px;
+			height:280px;
+			position:absolute;
+			top:0;
+			font-size:20px;
+			font-family:'simsun';
+			text-align:center;
+			line-height:280px;
+			cursor:pointer;
+			background:rgba(0,0,0,.5);
+			color:#fff;	
+			z-index:9999;
+			display:none;
+		}
+		.prev{
+			left:0;
+		}
+		.next{
+			right:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<p class="title">图片加载中……</p>
+		<p class="number">数量加载中……</p>
+		<span class="prev">&lt;</span>
+		<span class="next">&gt;</span>
+		<img src="images/8.jpg" height="280" width="450" alt="">
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		var banner=$('.banner')[0],
+		    title=$('.title')[0],
+		    number=$('.number')[0],
+		    prev=$('.prev')[0],
+		    next=$('.next')[0],
+		    oImg=document.getElementsByTagName('img')[0];
+		var srcAry=['images/8.jpg','images/9.jpg','images/10.jpg','images/11.jpg','images/12.jpg','images/13.jpg'],
+		    titleAry=['山川','河流','大海','夕阳','星空','大雁'];
+		var n=0,timer;
+		function auto(){
+			$(oImg).hide();
+			title.innerHTML=titleAry[n];
+			$(oImg).fadeIn(800);
+			oImg.src=srcAry[n];
+			number.innerHTML=n+1+'/'+srcAry.length;
+		}
+		auto();
+		timer=setInterval(nextPlay,2500);
+		next.onclick=nextPlay;
+		prev.onclick=prevPlay;
+		function nextPlay(){
+			n++;
+			if(n>srcAry.length-1){
+				n=0;
+			}
+			auto();
+		}
+		function prevPlay(){
+			$(oImg).hide();
+			n--;
+			if(n<0){
+				n=srcAry.length-1;
+			}
+			title.innerHTML=titleAry[n];
+			$(oImg).fadeIn(800);
+			oImg.src=srcAry[n];
+			number.innerHTML=n+1+'/'+srcAry.length;			
+		}
+		banner.onmouseover=function(){
+			clearInterval(timer);
+			prev.style.display='block';
+			next.style.display='block';
+		}
+		banner.onmouseout=function(){
+			timer=setInterval(nextPlay,2500);
+			prev.style.display='none';
+			next.style.display='none';
+		}
+	</script>
+</body>
+</html>

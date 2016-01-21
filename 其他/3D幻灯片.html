@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	ul{
+        		list-style:none;
+        	}
+			.flash{
+				width:970px;
+				height:410px;
+				background:red;
+				margin:100px auto;
+				position:relative;
+			}
+			#left,#right{
+				display:block;
+				position:absolute;
+				top:50%;
+				margin-top:-22px;
+				cursor:pointer;
+				z-index:100;
+			}
+			#left{
+				left:10px;
+			}
+			#right{
+				right:10px;
+			}
+			li{
+				position:absolute;
+				background:#000;
+			}
+			li img{
+				width:100%;
+				height:100%;
+				opacity:.5;		
+			}
+			.cs1 img{
+				opacity:1;
+			}
+			.cs1{			
+				height: 270px;
+				width:640px;
+				top:70px;
+				left:165px;		
+				z-index:9;		
+			}
+			.cs2,.cs3{			
+				z-index:8;
+				position:absolute;	
+				height: 230px;
+				width:540px;
+				top:90px;
+			}
+			.cs2{
+				left:0;
+			}
+			.cs3{
+				right: 0;
+			}
+			.cs{		
+				z-index:7;
+				position:absolute;	
+				height: 230px;
+				width:540px;
+				top:90px;		
+			}
+        </style>
+    </head>
+    <body>
+    <div class="flash">
+    	<img src="images/img/left.png" height="45" width="45" alt="" id="left">
+    	<img src="images/img/right.png" height="45" width="45" alt="" id="right">
+    	<ul>
+    		<li class="cs1"><img src="images/img/1.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs2"><img src="images/img/2.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/3.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/4.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/5.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/6.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/7.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/8.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs"><img src="images/img/9.jpg" height="410" width="970" alt=""></li>
+    		<li class="cs3"><img src="images/img/10.jpg" height="410" width="970" alt=""></li>
+    	</ul>
+    </div>
+    </body>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    	function 
+    </script>
+</html>

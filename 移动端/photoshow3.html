@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" onselectstart='return false'>
+    <head>
+        <meta charset="utf-8">
+        <style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background:#000;
+                overflow: hidden;
+			}
+			#wrap{
+				width:88px;
+				height:130px;
+				margin:300px auto;
+				position:relative;
+				transform-style: preserve-3d;
+                transform: perspective(800px) rotateX(-10deg) rotateY(0);
+			}
+			#wrap img{
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius:5px;
+				box-shadow:0 0 10px #fff;
+                transition:all 1s cubic-bezier(1,0,1,0);
+                -webkit-transition:all 1s cubic-bezier(1,0,1,0);
+				-webkit-box-reflect:below 8px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.5) 100%);
+			}
+        </style>
+    </head>
+    <body>
+    	<div id="wrap">
+    		<img src="images/img/1.jpg" height="130" width="88">
+    		<img src="images/img/2.jpg" height="130" width="88">
+    		<img src="images/img/3.jpg" height="130" width="88">
+    		<img src="images/img/4.jpg" height="130" width="88">
+    		<img src="images/img/5.jpg" height="130" width="88">
+    		<img src="images/img/6.jpg" height="130" width="88">
+    		<img src="images/img/7.jpg" height="130" width="88">
+    		<img src="images/img/8.jpg" height="130" width="88">
+    		<img src="images/img/9.jpg" height="130" width="88">
+    		<img src="images/img/10.jpg" height="130" width="88">
+    		<img src="images/img/11.jpg" height="130" width="88">
+    	</div>
+    </body>
+    <script>
+    	var oImg=document.getElementsByTagName('img'),
+    		wrap=document.getElementById('wrap'),
+            x,y,x_,y_,xN,yN,roY=0,roX=-10,timer=null;
+    		deg=360/oImg.length;
+    	for(var i=0;i<oImg.length;i++){
+    		oImg[i].style.webkitTransform='rotateY('+i*deg+'deg) translateZ(380px)';
+            oImg[i].style.webkitTransition='1s '+(oImg.length-1-i)*0.1+'s';
+    		oImg[i].ondragstart=function(){
+    			return false;
+    		}
+    	}
+    	document.onmousedown=function(e){
+            clearInterval(timer);
+            e=e||window.event;
+            x_=e.clientX;
+            y_=e.clientY;
+    		this.onmousemove=function(e){
+                e=e||window.event;
+                x=e.clientX;
+                y=e.clientY;
+                xN=x-x_;
+                yN=y-y_;
+                roY+=xN*0.2;
+                roX-=yN*0.2;
+                wrap.style.webkitTransform='perspective(800px) rotateX('+roX+'deg) rotateY('+roY+'deg)';
+                x_=e.clientX;
+                y_=e.clientY;
+    		}
+			this.onmouseup=function(){
+				this.onmousemove=null;
+                timer=setInterval(function(){
+                    xN*=0.9;
+                    yN*=0.9;
+                    if(Math.abs(xN)<0.5&&Math.abs(yN)<0.5){
+                        clearInterval(timer);
+                    }
+                    roY+=xN*0.3;
+                    roX-=yN*0.3;
+                    wrap.style.webkitTransform='perspective(800px) rotateX('+roX+'deg) rotateY('+roY+'deg)';
+                },30);
+			}
+    	}
+    </script>
+</html>

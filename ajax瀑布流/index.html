@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+			#wrap{
+				width:830px;
+				height:auto;
+				border:3px solid gray;
+				margin:50px 0 0 30px;
+				font-family: 'Microsoft yahei';
+				padding:8px;
+			}
+			#wrap li{
+				width:260px;
+				height:auto;
+				list-style:none;
+				float:left;
+			}
+			.clear{
+				clear: both;
+			}
+			.content{
+				width:260px;
+				height:auto;
+				border:1px solid #666;
+				margin-bottom: 10px;
+			}
+			#wrap img{
+				display:block;
+				width:100%;
+				height:auto;
+			}
+			a{
+				display:block;
+				width:100%;
+				text-align:center;
+				height:47px;
+				line-height:47px;
+				color:#333;
+				text-decoration:none;
+			}
+			a:hover{
+				color:#cd1245;
+			}
+			p{
+				background:#f1f1f1;				
+				height:47px;
+				line-height:47px;
+				color:#666;
+				text-align:center;
+				font-size:14px;			
+			}
+			#btn{
+				display:block;
+				width:80px;
+				height:30px;
+				margin:0 auto;
+				background:#999;
+				border:none;
+				font-size:14px;
+				cursor: pointer;
+				outline:none;
+			}
+
+        </style>
+    </head>
+    <body>
+    	<div id="wrap">
+    		<ul>
+    			<li>
+    			</li>
+    			<li style="margin:0 24px;">				
+    			</li>
+    			<li>
+    			</li>
+    		</ul>
+    		<div class="clear"></div>
+    		<input type="button" value="加载更多" id="btn">
+    	</div>
+    </body>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    	// 1.图片的路径  2.a标签里的文字
+    	var oLi=$('#wrap li');
+    	var num=0;
+    	function load(num){
+	    	$.ajax({
+	    		url:'data.json',
+	    		type:'get',
+	    		dataType:"json",
+				success:function(data){
+					bind(data);
+				},
+				error:function(){
+					alert("error");
+				}
+	    	});    		
+    	};
+    	function bind(data){
+    		for(var i=num;i<num+3;i++){
+    			var cur=data[i];
+    			var src=cur['src'];
+    			var title=cur['title'];
+    			var oImg=new Image();
+    			oImg.src=src;
+    			oImg.onload=function(){
+    				var oDiv=document.createElement('div');
+    				var oA=document.createElement('a');
+    				var oP=document.createElement('p');
+    				oDiv.className='content';
+    				oA.href='#';
+    				oA.innerHTML=title;
+    				oP.innerHTML='阅读全文';
+    				oDiv.appendChild(this);
+    				oDiv.appendChild(oA);
+    				oDiv.appendChild(oP);
+    				oLi[getShort()].appendChild(oDiv);
+    			}		
+    		}
+    	};
+    	load(num);
+    	function getShort(){
+    		var i=0;
+    		var iH=oLi[0].offsetHeight;
+    		for(var j=0;j<oLi.length;j++){
+	    		if(oLi[j].offsetHeight<iH){
+					iH=oLi[j].offsetHeight;
+					i=j;
+				}    			
+    		}
+    		return i;
+    	};
+    	$('#btn').click(function(){
+    		num+=3;
+    		load(num);
+    	});
+    </script>
+</html>
