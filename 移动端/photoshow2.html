@@ -16,6 +16,12 @@
 				margin-top: 150px;
 				position: relative;
 				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				-webkit-perspective: 600px;
+				-moz-perspective: 600px;
+				-ms-perspective: 600px;
 				perspective: 600px;
 			}
 			#wrap img{
@@ -23,16 +29,20 @@
 				-webkit-box-reflect:below 5px -webkit-linear-gradient(top,rgba(0,0,0,0) 20%,rgba(0,0,0,.3) 70%);
 				/*box-shadow:0 0 10px #fff;*/
 				-webkit-transition: 1s;
+				transition: 1s;
 			}
 			
 			#wrap img.left{
 				-webkit-transform: rotateY(45deg) translateZ(-100px);
+				transform: rotateY(45deg) translateZ(-100px);
 			}
 			#wrap img.middle{
 				-webkit-transform: translateZ(100px);
+				transform: translateZ(100px);
 			}
 			#wrap img.right{
 				-webkit-transform: rotateY(-45deg) translateZ(-100px);
+				transform: rotateY(-45deg) translateZ(-100px);
 			}
         </style>
     </head>

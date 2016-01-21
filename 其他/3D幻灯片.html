@@ -13,7 +13,6 @@
 			.flash{
 				width:970px;
 				height:410px;
-				background:red;
 				margin:100px auto;
 				position:relative;
 			}
@@ -47,8 +46,8 @@
 				height: 270px;
 				width:640px;
 				top:70px;
-				left:165px;		
-				z-index:9;		
+				left:165px;	
+				z-index:11;	
 			}
 			.cs2,.cs3{			
 				z-index:8;
@@ -61,14 +60,15 @@
 				left:0;
 			}
 			.cs3{
-				right: 0;
+				left:430px;
 			}
 			.cs{		
 				z-index:7;
 				position:absolute;	
 				height: 230px;
 				width:540px;
-				top:90px;		
+				top:90px;
+				left:200px;		
 			}
         </style>
     </head>
@@ -92,6 +92,58 @@
     </body>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-    	function 
+    	var arrWidth=[],
+    		arrHeight=[],
+    		arrTop=[],
+    		arrLeft=[],
+    		arrOpacity=[],
+    		arrZindex=[],
+    		a=0;
+    	var obj=$('li');
+    	var len=obj.length;
+    	$('#right').click(function(){
+    		play(1);
+    	});
+    	$('#left').click(function(){
+    		play(0);
+    	});
+    	function play(pk){
+    		for(var i=0;i<len;i++){
+    			arrWidth[i]=obj.eq(i).css('width');
+    			arrHeight[i]=obj.eq(i).css('height');
+    			arrTop[i]=obj.eq(i).css('top');
+    			arrLeft[i]=obj.eq(i).css('left');
+    			arrOpacity[i]=obj.eq(i).find('img').css('opacity');
+    			arrZindex[i]=obj.eq(i).css('z-index');
+    		}
+    		for(var i=0;i<len;i++){
+    			if(pk==0){
+    				if(i==0){
+    					a=len-1;
+    				}else{
+    					a=i-1;
+    				}
+    			};
+    			if (pk==1) {
+    				if(i==len-1){
+    					a=0;
+    				}else{
+    					a=i+1;
+    				}
+    			};
+    			obj.eq(i).find('img').css({
+    				'opacity':arrOpacity[a]
+    			});
+    			obj.eq(i).animate({
+    				'width': arrWidth[a],
+    				'height': arrHeight[a],
+    				'left':arrLeft[a],
+    				'top':arrTop[a]
+    			},400);
+    			obj.eq(i).css({    				
+    				'z-index':arrZindex[a]
+    			});
+    		}
+    	}
     </script>
 </html>
