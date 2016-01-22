@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position: relative;
+            margin:100px 300px;
+            width:215px;
+        }
+        ul{
+            position: absolute;
+            list-style: none;
+            width:210px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        li{
+            cursor:pointer;
+            line-height: 25px;
+        }
+        li:hover{
+            background: aquamarine;
+        }
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+</head>
+<body>
+<div id="box">
+    <input type="text" id="ip"/>
+    <button id="btn">搜索</button>
+    <ul id="uu">
+    </ul>
+</div>
+<script>
+    $('#ip').keyup(function(){
+        var search=$('#uu');
+        search.css('display','block');
+        var val=$('#ip').val();
+        search.click(function(e){
+            $("#ip").val(e.target.innerHTML);
+            window.open('http://www.baidu.com/s?wd='+encodeURIComponent(e.target.innerHTML));
+            $(this).hide();
+        });
+        $('#btn').click(function () {
+            window.open('http://www.baidu.com/s?wd='+encodeURIComponent($("#ip").val()));
+        });
+        $.ajax({
+            method:'get',
+            async:'true',
+            url:'https://gsp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+            data:{'wd':val},
+            dataType:'jsonp',
+            jsonp:'cb',
+            success:function (json) {
+                uu.innerHTML = '';
+                var fragement = document.createDocumentFragment();
+                json['s'].forEach(function (item) {
+                    var li = document.createElement('li');
+                    li.innerHTML = item;
+                    fragement.appendChild(li);
+                });
+                uu.appendChild(fragement);
+            },
+            error:function(er){
+                alert('出错了');
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

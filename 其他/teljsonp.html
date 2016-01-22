@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <style>
+        li{
+            list-style:none;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+输入手机号：<input type="text" id="ip"/><button id="btn">查询</button>
+<ul id="search"></ul>
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            var val=$('#ip').val();
+            $('#search').html("");
+            if(val){
+                $.ajax({
+                    method:'get',
+                    url:'http://tcc.taobao.com/cc/json/mobile_tel_segment.htm',
+                    async:true,
+                    data:{'tel':val},
+                    dataType:'jsonp',
+                    jsonp:'callback',
+                    jsonpCallback:'aa',
+                    success:function(json) {
+                        var frag = document.createDocumentFragment();
+                        for (var n in json) {
+                            var li = document.createElement('li');
+                            li.innerHTML = n + ':' + json[n];
+                            frag.appendChild(li);
+                        }
+                        search.appendChild(frag);
+                    },
+                    error:function(er){
+                        //alert(er);
+                    }
+                })
+            }
+        })
+    })
+</script>
+</body>
+</html>
