@@ -74,7 +74,7 @@
     				var cur=imgs[i];
     				var imgTop=getTop(cur);
     				if(imgTop<winTop){
-    					cur.setAttribute('src',cur.getAttribute('rel'));
+    					cur.setAttribute('src',cur.getAttribute('rel')+"?"+Math.random());
     				}
     			}
     		}
