@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>现在是<span id="clock"></span></div>
+    <script>
+        var clock=document.getElementById('clock');
+        function getData(){
+            var xhr=new XMLHttpRequest();
+            xhr.open('GET','http://localhost:8080/clock',true);
+            xhr.send();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4){
+                    if(xhr.status===200){
+                        clock.innerHTML=xhr.responseText;
+                    }
+                }
+            }
+        }
+        setInterval(function(){
+            getData();
+        },1000);
+
+    </script>
+</body>
+</html>
