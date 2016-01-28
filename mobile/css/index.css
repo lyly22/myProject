@@ -1,0 +1,179 @@
+/* 
+* @Author: Administrator
+* @Date:   2016-01-28 10:05:23
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-01-28 15:27:00
+*/
+/*body{
+	max-width: 600px;
+	margin:auto;
+}*/
+header{
+	width: 100%;
+	background-color: #ff6600;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	font-size: 16px;
+	padding-right: 15px;
+}
+header img{
+	margin:10px 0 0 10px;
+}
+.register,.login{
+	color: #fff;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.nav{
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #e3e7e8;
+}
+.nav a{
+	display: inline-block;
+	width: 32.5%;
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	color: #9FABB2;
+	text-align: center;
+}
+.nav a.act{	
+	color: #ff6600;
+	border-bottom: 2px solid #ff6600;
+	font-weight: bold;
+}
+.banner{
+	width: 100%;
+	height: 130px;
+	position: relative;
+	overflow: hidden;
+	margin-top: -1px;
+}
+.slider{
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.slider li{
+	height: auto;
+	float: left;
+}
+.slider img{
+	width: 100%;
+	height: auto;
+}
+.slider a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.circle{
+	position: absolute;
+	left: 50%;
+	bottom:8px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.circle li{
+	width: 8px;
+	height: 8px;
+	background: #fff;
+	border-radius: 8px;
+	margin-right: 7px;
+	float: left;
+}
+.circle li.act{
+	background-color: #ff6600;
+}
+.prj{
+	padding:25px 10px;
+}
+.prj h3{
+	font-size: 17px;
+	color: #ff6600;
+	font-weight: normal;
+}
+.prj-con{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/sprites.png) no-repeat -100em -100em;
+	background-size: 200px 200px;
+	vertical-align: text-top;
+	background-position: 0 0;
+	margin-right: 4px;
+}
+.prj-con2{
+	background-position: 0px -147px;
+}
+.prj-con3{
+	background-position: -40px 0;
+}
+.can-invest{
+	font-size: 14px;
+	color: #f28b19;
+}
+.description{
+	clear: both;
+	font-size: 13px;
+	padding-right: 4px;
+	color: #667279;
+	margin:0 0 6px 23px;
+	padding-top: 4px;
+}
+.safe i{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../images/guarantee.png);
+	background-size: cover;
+	vertical-align: -2px;
+	margin-right: 2px;
+}
+.safe{
+	color: #A0ABB2;
+	margin-left: 23px;
+}
+.has-invest{
+	color: #9FABB2;	
+}
+#footer{
+	border-top: 1px solid #E3E7E8;
+	margin-top: 10px;
+	padding-bottom: 15px;
+	color: #9FABB2;
+	text-align: center;
+}
+.btn-white{
+	display: inline-block;
+	padding:6px 8px;
+	color: #ff6600;
+	border: 1px solid #E3E7E8;
+	border-radius: 3px;
+	margin-top:16px;
+}
+.btn-white:nth-of-type(1){
+	margin-left: 50px;
+}
+.btn-white:nth-of-type(2){
+	margin-right: 50px;
+}
+.footer-nav{
+	clear: both;
+	padding:16px 0;
+}
+.footer-nav a{
+	display: inline-block;
+	padding:0 15px;
+	border-right:1px solid #E3E5E5;
+	color: #9FABB2;
+}
+.footer-nav a:last-child{
+	border-right: none;
+}
+.copyright{
+	padding-top: 10px;
+}
