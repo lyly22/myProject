@@ -2,12 +2,13 @@
 * @Author: Administrator
 * @Date:   2016-01-28 10:05:23
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-01-28 15:56:04
+* @Last Modified time: 2016-01-29 15:17:13
 */
 body{
 	max-width: 600px;
 	margin:auto;
 	overflow-x: hidden;
+	background: #FAFCFC;
 }
 header{
 	width: 100%;
@@ -16,7 +17,6 @@ header{
 	line-height: 45px;
 	color: #fff;
 	font-size: 16px;
-	padding-right: 15px;
 }
 header img{
 	margin:10px 0 0 10px;
@@ -90,10 +90,16 @@ header img{
 .prj{
 	padding:25px 10px;
 }
+#project{
+	padding-bottom: 10px;
+}
 .prj h3{
 	font-size: 17px;
 	color: #ff6600;
 	font-weight: normal;
+}
+.prj h3 a{
+	color: #ff6600;
 }
 .prj-con{
 	display: inline-block;
@@ -123,14 +129,14 @@ header img{
 	margin:0 0 6px 23px;
 	padding-top: 4px;
 }
-.safe i{
+.safe i,.guarantee{
 	display: inline-block;
 	width: 14px;
 	height: 14px;
 	background: url(../images/guarantee.png);
 	background-size: cover;
 	vertical-align: -2px;
-	margin-right: 2px;
+	margin-right: 5px;
 }
 .safe{
 	color: #A0ABB2;
@@ -141,7 +147,6 @@ header img{
 }
 #footer{
 	border-top: 1px solid #E3E7E8;
-	margin-top: 10px;
 	padding-bottom: 15px;
 	color: #9FABB2;
 	text-align: center;
@@ -176,3 +181,59 @@ header img{
 .copyright{
 	padding-top: 10px;
 }
+/*acount*/
+.downlaodImg{
+	margin: -1px 0 10px 0;
+}
+.account,.loginout-btn{
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+}
+.arrow{
+	display: inline-block;
+	background:url(../images/sprites.png) no-repeat 0 -40px;
+	float:right;
+	width: 20px;
+	height: 20px;
+	background-size: 200px 200px;
+	margin-top: 12px;
+}
+.account li{
+	padding-right: 10px;
+	height: 45px;
+	line-height: 45px;
+	/*overflow: hidden;*/
+}
+.account span{
+	display: block;
+	float: left;
+	padding-left: 15px;
+	font-size: 14px;
+}
+.account span.txt{
+	color: #667279;
+	width: 25%;
+}
+.account span.value{
+	color: #9FABB2;
+	width: 46%;
+}
+.charge{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background: #ff6600;
+	color: #ffffff;
+	border-radius: 5px;
+	margin:10px 5px 0 0;
+}
+.loginout-btn{
+	line-height: 45px;
+	text-align: center;
+	color: #667279;
+	background: #fff;
+	margin: 20px 0;
+	font-size: 14px;
+}
+

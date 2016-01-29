@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-01-28 11:49:32
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-01-28 15:54:44
+* @Last Modified time: 2016-01-29 11:30:35
 */
 
 'use strict';
@@ -32,3 +32,7 @@ function play(){
 	// slider.css('webkitTransition','1s');
 }
 timer=setInterval('play()',3000);
+$('.question-list a').click(function(){
+	$(this).siblings('.answer').show();
+});
+$('#about').addClass('current');
