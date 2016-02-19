@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-01-28 11:49:32
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-01-29 16:49:58
+* @Last Modified time: 2016-02-19 08:50:27
 */
 
 'use strict';
@@ -62,10 +62,6 @@ banner.addEventListener('touchend',function(e){
 			play();
 			window.setTimeout(function(){timer=setInterval('play()',3000);},8000);
 		}		
-});
-
-$('.question-list span').click(function(){
-	$(this).siblings('.answer').slideToggle();
 });
 
 $('#about').addClass('current');

@@ -46,5 +46,11 @@
     	</div>
     </body>
     <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/index.js"></script>
+    <script>
+    	
+
+		$('.question-list span').click(function(){
+			$(this).siblings('.answer').slideToggle();
+		});
+    </script>
 </html>
