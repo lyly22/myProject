@@ -1,0 +1,356 @@
+/* 
+* @Author: Administrator
+* @Date:   2016-01-04 10:04:07
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-01-04 20:28:26
+*/
+/*reset*/
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,memu
+{
+	display: block;
+}
+body{
+	font-family: 'Microsoft Yahei', Tahoma,Helvetica,Arial,sans-serif;
+	/*font-size: 62.5%;*/
+	/*overflow: hidden;*/
+}
+html{
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+}
+html,body{
+	height: 100%;
+}
+ul{
+	list-style: none;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	height: 0;
+	clear:both;
+}
+/*main*/
+.arr{
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	background: url(../images/arr.png);
+	z-index: 200;
+	-webkit-transform: translateX(-50%);
+	-webkit-animation: tip 1.5s ease-in-out infinite;
+}
+.music{
+	width: 30px;
+	height: 30px;
+	background: url(../images/music_on.png);
+	background-size: cover;
+	position: absolute;
+	right:10px;
+	top:15px;
+	z-index: 200;
+	-webkit-animation: musicRotate 1s linear infinite;
+}
+.main{
+	width: 100%;
+	height: 100%;
+}
+.zIndex{
+	z-index: 100;
+}
+.loading div {
+	width: 0;
+	height: 0;
+	background:#10759a;
+	border-radius: 60%;
+	top:50%;
+	left: 50%;
+	-webkit-transform:translate(-50%,-50%);
+	-webkit-animation: loading 1s linear infinite;
+	-webkit-transform-origin: center;
+}
+@keyframes loading{
+	from{
+		width: 0;
+		height: 0;
+	}
+	to{
+		width: 30px;
+		height: 30px;
+	}
+}
+.main>section,.loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.section1{
+	background: url(../images/phone1.png);
+	background-size: cover;
+}
+.section1 article{
+	position: absolute;
+	top:40%;
+	right: 15px;
+}
+.section1 article p{
+	padding: 5px;
+}
+.section1 article p:nth-child(odd){
+	-webkit-transform: translateX(300px);
+	transform: translateX(300px);
+}
+.section1 article p:nth-child(even){
+	-webkit-transform: translateX(-300px);
+	transform: translateX(-300px);
+}
+.section1 img{
+	position: absolute;
+	opacity: 0;
+}
+.section1 img:nth-of-type(1){
+	top: 45px;
+	left:75px;
+}
+.section1 img:nth-of-type(2){
+	bottom: 15px;
+	left:5px;
+}
+.section1 img:nth-of-type(3){
+	top: 220px;
+	left:20px;
+}
+#section1 article p{
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: 1s;
+}
+#section1 img{
+	opacity: 1;
+	-webkit-transition: 3s 0.5s;
+	transition: 3s 0.5s;
+}
+.section2{
+	background: url(../images/phone2.jpg);
+	background-size: cover;
+}
+.section2 div{
+	position: absolute;
+	top:10px;
+	left: 10px;
+	overflow: hidden;
+	height: 0;
+}
+.section2 div p{
+	margin: 8px;
+}
+#section2 div{
+	height: 192px;
+	-webkit-transition: 13s;
+	transition: 13s;
+}
+.section2 img{
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 55px;
+	left: 15px;
+	border: 10px solid #fff;
+}
+.section2 img:nth-of-type(2){
+	-webkit-transform: rotate(-5deg) scale(0);
+	transform: rotate(-5deg);
+}
+.section2 img:nth-of-type(3){
+	-webkit-transform: rotate(20deg) scale(0);
+	transform: rotate(20deg);
+}
+.section2 img:nth-of-type(4){
+	-webkit-transform: rotate(10deg) scale(0);
+	transform: rotate(10deg);
+}
+#section2 img:nth-of-type(1){
+	-webkit-transition:1s;
+}
+#section2 img:nth-of-type(2){
+	-webkit-transition:2s;
+}
+#section2 img:nth-of-type(3){
+	-webkit-transition:3s;
+}
+#section2 img:nth-of-type(4){
+	-webkit-transition:4s;
+}
+#section2 img{
+	width: 80%;
+	height: 160px;
+	-webkit-transform-origin: center center;
+}
+.section3{
+	background: url(../images/phone3.jpg);
+	background-size: cover;
+}
+.section3 article{
+	width: 260px;
+	margin:20% auto;
+	text-align: center;
+}
+.section3 article p{
+	background: rgba(255,255,255,0.5);
+	padding:8px 0;
+	/*opacity: 0;*/
+}
+#section3 p:nth-of-type(1){
+	-webkit-animation: flipInX 1s 0s;
+}
+#section3 p:nth-of-type(2){
+	-webkit-animation: flipInX 1s 0.4s;
+}
+#section3 p:nth-of-type(3){
+	-webkit-animation: flipInX 1s 0.8s;
+}
+#section3 p:nth-of-type(4){
+	-webkit-animation: flipInX 1s 1.2s;
+}
+#section3 p:nth-of-type(5){
+	-webkit-animation: flipInX 1s 1.6s;
+}
+#section3 p:nth-of-type(6){
+	-webkit-animation: flipInX 1s 2.0s;
+}
+.section4{
+	background: url(../images/phone4.gif);
+	background-size: cover;
+}
+.section4 h1{
+	color: #fff;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 30%;
+}
+.section4 p{
+	background: rgba(0,0,0,0.5);
+	padding: 10px;
+	color: #fff;
+	position: absolute;
+	top:35%;
+	left: 10%;
+}
+.section4 p:nth-of-type(2){
+	top:46%;	
+}
+.section5{
+	background: url(../images/phone5.jpg);
+	background-size: cover;
+}
+.section5 .cover,.section5 article{
+	position: absolute;
+	top:30%;
+	left: 10%;	
+}
+.section5 .cover{
+	width: 260px;
+	height: 260px;
+	background: rgba(0,0,0,0.3);
+}
+.section5 article{
+	color: #fff;
+	width: 250px;
+	top: 32%;
+	left: 13%;
+}
+.moon{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-bottom: 20px solid #F3D844;
+	border-bottom-right-radius: 100%;
+	border-bottom-left-radius: 100%;
+	top:2%;
+	right: 8%;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+@keyframes musicRotate{
+	from{
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes musicRotate{
+	from{
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+	}	
+}
+
+@keyframes tip{
+	0%,100%{
+		bottom:10px;
+		opacity: 1;
+	}
+	30%{
+		bottom:18px;
+		opacity: 0;
+	}
+	50%{
+		bottom:26px;
+		opacity: 0;
+	}
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,90deg);
+        -ms-transform: perspective(400px) rotate3d(1,0,0,90deg);
+        transform: perspective(400px) rotate3d(1,0,0,90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        -ms-transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,10deg);
+        -ms-transform: perspective(400px) rotate3d(1,0,0,10deg);
+        transform: perspective(400px) rotate3d(1,0,0,10deg);
+        opacity: 1
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-5deg);
+        -ms-transform: perspective(400px) rotate3d(1,0,0,-5deg);
+        transform: perspective(400px) rotate3d(1,0,0,-5deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        -ms-transform: perspective(400px);
+        transform: perspective(400px);
+        opacity: 1;
+    }
+}
