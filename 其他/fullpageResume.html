@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.fullPage.css">
+        <link rel="stylesheet" href="css/fullPage.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.fullPage.js"></script>
+    </head>
+    <body>
+	    <div id="fullpage">
+		    <div class="section">
+		    	<div id="head" class="fl">
+		    		<div class="head"><img src="images/head.png"></div>
+		    		<h3>WEB前端开发工程师<br />陆莹</h3>
+		    	</div>
+		    	<ul id="contact" class="fr">
+		    		<li><i class="iconfont">&#xe61a;</i><span>13770937179</span></li>
+		    		<li><i class="iconfont">&#xe668;</i><span>13770937179@163.com</span></li>
+		    		<li><i class="iconfont">&#xe709;</i><span>lyly22</span></li>
+		    		<li><i class="iconfont">&#xe6ee;</i><span>luying061422</span></li>
+		    	</ul>
+		    </div>
+		    <div class="section">
+				<div class="fl about-left">
+					<h1>About Me</h1>
+					<p class="active">information</p>
+					<p>education</p>
+					<p>hobbies</p>
+				</div>
+				<div class="fr about-right">
+					<h2>the followings are my <span>information</span></h2>
+					<div class="about-info active">
+						<p>姓名：陆莹</p>
+						<p>籍贯：江苏徐州</p>
+						<p>出生年月：199306</p>
+					</div>
+					<div class="about-info">
+						<p>大学：赣南医学院</p>
+						<p>专业：生物医学工程</p>
+						<p>所获证书：英语四六级、计算机二级</p>
+					</div>
+					<div class="about-info">
+						<p>中国古典文学，诗词，传统文化，史学</p>
+						<p>散步</p>
+						<p>发呆</p>
+					</div>
+				</div>
+		    </div>
+		    <div class="section">
+		    	<div class="fl-slide">		    	
+		    		<h2>工作履历</h2>
+		    		2015/1-2015/11<br />
+					江苏融仕发金融信息服务有限公司<br />
+					前端：负责将美工设计的页面转化为html页面，并实现交互效果<br />
+					2015/11--至今<br />
+					江苏融贸通投资管理有限公司<br />
+					前端：开发公司投资理财平台，负责将UI设计的页面转换为符合W3C规范并且兼容良好的html页面并实现页面相应的交互效果以及微信公众平台前端页面开发
+		    	</div>
+		    	<div class="fr-slide">	
+		    		<h2>个人技能</h2>
+		    		1. 熟练掌握HTML、CSS，可快速将UI页面转换为符合W3C并且兼容ie6及以上html页面。<br />
+					2. 掌握一定程度原生JavaScript、熟练使用DOM、Ajax等；<br />
+					3. 熟练掌握jQuery库；<br />
+					4. 熟悉Bootstrap,Amaze UI前端框架；<br />
+					5. 掌握git基本命令，了解node基本使用；<br />
+					6. 熟练操作photoshop。
+		    	</div>
+		    </div>
+		    <div class="section no-padding">
+				<!-- <h2>Demo</h2> -->
+				<div class="demo fl">
+					<a href="http://lyly22.github.io/myProject/京东/index.html"><img src="images/jd.png"></a>
+					<div class="mask-container">
+						<a href="http://lyly22.github.io/myProject/京东/index.html" target="_blank">
+							<div class="mask">
+							</div>
+							<div class="mask-text">							
+								<p>京东首页</p>
+								<p>html+css+js</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="demo fr">
+					<a href="http://lyly22.github.io/myProject/TencentSport/index.html"><img src="images/sport.png"></a>
+					<div class="mask-container">
+						<a href="http://lyly22.github.io/myProject/TencentSport/index.html" target="_blank">
+							<div class="mask">
+							</div>
+							<div class="mask-text">							
+								<p>腾讯体育</p>
+								<p>html+css+js+ajax</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="demo fl small-demo">
+					<a href="http://lyly22.github.io/myProject/2048游戏/index.html"><img src="images/2048.jpg"></a>
+					<div class="mask-container">
+						<a href="http://lyly22.github.io/myProject/2048游戏/index.html" target="_blank">
+							<div class="mask">
+							</div>
+							<div class="mask-text">							
+								<p>2048</p>
+								<p>html+css+js</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="demo fr small-demo">
+					<a href="http://lyly22.github.io/myProject/移动端/H5场景/index.html"><img src="images/h5.jpg"></a>
+					<div class="mask-container">
+						<a href="http://lyly22.github.io/myProject/移动端/H5场景/index.html" target="_blank">
+							<div class="mask">
+							</div>
+							<div class="mask-text">							
+								<p>H5场景</p>
+								<p>html5+css3+js</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<a href="http://lyly22.github.io/myProject/" class="more">查看更多&gt;&gt;</a>
+		    </div>
+		</div>
+    </body>
+    <script>
+    	$(function(){
+		    $('#fullpage').fullpage({
+		        'verticalCentered': false,
+		        'css3': true,
+		        'sectionsColor': ['#99ccff','#ccff99','#ffcccc','#ffff66','#ffcc99'],
+		        anchors: ['page1', 'page2', 'page3', 'page4'],
+		        'navigation': true,
+		        'navigationPosition': 'right',
+		        'navigationColor':'#fff',
+		        afterLoad:function(anchorLink,index){
+		        	if(index===3){
+		        		$('.fl-slide').animate({
+		        			left:'200px'
+		        		},1000);
+		        		$('.fr-slide').animate({
+		        			right:'125px'
+		        		},1000);
+		        	};
+		        	if(index===4){
+		        		$('.demo').fadeIn(1000);
+		        	}
+		        }
+		    })
+		});
+		$(function(){
+			$('.about-left p').click(function(){
+				var index=$(this).index()-1;
+				$(this).addClass('active').siblings('p').removeClass('active');
+				$('.about-info').eq(index).addClass('active').siblings('.about-info').removeClass('active');
+				$('.about-right h2 span').text($(this).text());
+			});
+			$('.demo').hover(function(){
+				$(this).find('.mask-container').animate({
+					top:'0'
+				},300);
+			},function(){
+				$(this).find('.mask-container').animate({
+					top:'300'
+				},300);
+			});
+		})
+    </script>
+</html>
