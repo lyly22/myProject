@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-03-08 11:44:07
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-03-08 15:34:37
+* @Last Modified time: 2016-03-10 09:58:51
 */
 body{
 	font-family: "Microsoft Yahei";
@@ -109,11 +109,11 @@ li{
 }
 .fl-slide{
 	left: -100%;
-	top:100px;
+	top:60px;
 }
 .fr-slide{
 	right: -100%;
-	bottom:100px;
+	bottom:60px;
 }
 .demo{
 	width: 450px;
