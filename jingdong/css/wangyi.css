@@ -1,0 +1,110 @@
+/*
+* @Author: Administrator
+* @Date:   2016-03-11 15:37:09
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-03-11 16:49:53
+*/
+body{
+	color: #666;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+#top{
+	width: 100%;
+	background: #f3f3f3;
+	height: 36px;
+	line-height: 36px;
+}
+.seenow{
+	color: #21a557;
+}
+.no-tip{
+	height: 12px;
+	margin:12px 0;
+	text-indent: 12px;
+	line-height: 12px;
+	background: url(../images/spirit.png) no-repeat -284px -25px;
+}
+.wrap{
+	width: 1200px;
+	margin:0 auto;
+}
+.nav{
+	padding:32px 0 56px 0;
+}
+.logo{
+	display: inline-block;
+	width: 156px;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 84px;
+	font-size: 22px;
+	background: url(../images/spirit.png) -223px 3px no-repeat;
+}
+.notice{
+	padding:3px 5px;
+	background: #21a557;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	margin:-10px 12px 0 20px;
+}
+.fans{
+	font-family: 12px/21px SimSun;
+	color: #666;
+}
+.nav-list a{
+	margin-right: 56px;
+	color: #666;
+	font-size: 16px;
+}
+.nav-list a:hover{
+	color: #21a557;
+}
+.nav-list a.search{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../images/spirit.png);
+	margin-right: 0;
+}
+#banner{
+	position: relative;
+}
+#banner img{
+	display: block;
+	width: 100%;
+}
+.circle{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 15px;
+}
+.circle li{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	margin-right: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.circle li.active{
+	background: #21a557;
+}
+.icon{
+	width: 80px;
+	height: 80px;
+	background: url(../images/spirit.png) no-repeat 0 -83px;
+}
+.items h1{
+	color: #333;
+	font-size: 22px;
+	margin-bottom: 15px;
+	font-weight: normal;
+}

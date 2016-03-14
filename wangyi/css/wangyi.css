@@ -1,0 +1,514 @@
+/*
+* @Author: Administrator
+* @Date:   2016-03-11 15:37:09
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-03-14 15:57:30
+*/
+body{
+	color: #666;
+	overflow-x: hidden;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+#top{
+	width: 100%;
+	background: #f3f3f3;
+	height: 36px;
+	line-height: 36px;
+}
+.seenow{
+	color: #21a557;
+}
+.no-tip{
+	height: 12px;
+	margin:12px 0;
+	text-indent: 12px;
+	line-height: 12px;
+	background: url(../images/spirit.png) no-repeat -284px -25px;
+	cursor: pointer;
+}
+.wrap{
+	width: 1200px;
+	margin:0 auto;
+}
+.nav{
+	padding:32px 0 56px 0;
+}
+.logo{
+	display: inline-block;
+	width: 156px;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 84px;
+	font-size: 22px;
+	background: url(../images/spirit.png) -223px 3px no-repeat;
+}
+.notice{
+	padding:3px 5px;
+	background: #21a557;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	margin:-10px 12px 0 20px;
+}
+.notice:hover{
+	background-color: #2fb556;
+}
+.fans{
+	font-family: 12px/21px SimSun;
+	color: #666;
+}
+.fans i{
+	font-style: normal;
+}
+.m-popuplog{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	z-index: 100;
+}
+.nav-list a{
+	margin-right: 56px;
+	color: #666;
+	font-size: 16px;
+}
+.nav-list a:hover{
+	color: #21a557;
+}
+.nav-list a.search{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../images/spirit.png);
+	margin-right: 0;
+}
+.nav-list a.search:hover{
+	background-position:0 -18px; 
+}
+#banner{
+	position: relative;
+	height: 376px;
+	overflow: hidden;
+}
+#banner a{
+	position: absolute;
+	left: 0;
+	top:0;
+}
+#banner img{
+	display: block;
+	width: 100%;
+}
+.circle{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 15px;
+	z-index: 1;
+}
+.circle li{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	margin-right: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.circle li.active{
+	background: #21a557;
+}
+.m-bd{
+	width: 100%;
+	background: #f8f8f8;
+}
+.item-box{
+	height: 295px;
+}
+.items{
+	width: 339px;
+	height: 235px;
+	margin:60px 30px 0;
+}
+.icon{
+	width: 80px;
+	height: 235px;
+	background: url(../images/spirit.png) no-repeat 0 -83px;
+	margin:8px 20px 0 0;
+}
+.items h1{
+	color: #333;
+	font-size: 22px;
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+.icon2{
+	background-position:-80px -83px;
+}
+.icon3{
+	background-position:-160px -83px;
+}
+.team p{
+	font-size: 14px;
+	line-height: 24px;
+	height: 120px;
+}
+.team a{
+	font-size: 14px;
+	color: #21a557;
+}
+.team a:hover{
+	text-decoration: underline;
+}
+.workplace{
+	height: 224px;
+	background: #f8f8f8;
+}
+.workplace div{
+	padding-top: 2px;
+	width:1620px;
+}
+.workplace img{
+	float: left;
+	margin-right: 4px;
+}
+.lesson{
+	padding-top: 80px;
+}
+.tab{
+	width: 400px;
+	height: 50px;
+	margin-bottom: 20px;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	text-align: center;
+	font: 20px/50px 'Microsoft YaHei';
+}
+.tab div{
+	width: 200px;
+	background: #fff;
+	cursor: pointer;
+}
+.tab div.active{
+	background: #39a030;
+	color: #fff;	
+}
+.lesson-box{
+	position: relative;
+	float: left;
+	width: 225px;
+	height: 228px;
+	/* margin:10px; */
+	margin:10px 10px 10px 0;
+	background: #fff;
+	box-shadow: 0 1px 1px 1px #e6e6e6;
+	font: 12px/12px 'Microsoft YaHei';
+}
+.lesson-box img{
+	width: 223px;
+	height: 124px;
+	margin:1px 1px 10px 1px;
+}
+.coursename{
+	width: 214px;
+	height: 12px;
+	color: #333;
+	padding-left: 5px;
+}
+.provider{
+	color: #999;
+	padding:10px 5px;
+}
+.lesson-box span{
+	color: #999;
+	margin-left: 5px;
+	padding:0 4px 0 18px;
+	font-size: 10px;
+	border:1px solid #ddd;
+	border-radius: 2px;
+	background: url(../images/spirit.png) no-repeat -35px -20px;
+}
+strong{
+	color: #ff3f00;
+	display: block;
+	margin:10px 0 20px 5px;
+}
+.lesson-box a{
+	display: none;
+	position: absolute;
+	top:-10px;
+	left: -10px;
+	width: 461px;
+	min-height: 218px;
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0 0 2px 1px #d3d1d2;
+	z-index: 99;
+}
+.lesson-box a img{
+	float: left;
+}
+.lesson-box a h3{
+	margin: 0 10px 12px 233px;
+	color: #333;
+	font: 20px/26px 'Microsoft YaHei';
+}
+.lesson-box a span{
+	font: 12px/12px 'Microsoft YaHei';
+	border:none;
+	background:url(../images/spirit.png) no-repeat -35px -20px;
+}
+.lesson-box a .categoryname{
+	height: 40px;
+	font:12px/20px 'Microsoft YaHei';
+	padding:10px 0 0 233px;
+}
+.lesson-box a .description{
+	clear: both;
+	width: 426px;
+	padding-left: 15px;
+	font: 14px/24px 'Microsoft YaHei';
+}
+.page{
+	padding:30px 0 100px 0;
+	font: 14px/20px 'Microsoft YaHei';
+}
+.prev{
+	background: #9dd8b1 url(../images/spirit.png) -263px -123px
+}
+.prev,.next{
+	display: block;
+	width: 30px;
+	height: 20px;
+}
+.next{
+	background: #9dd8b1 url(../images/spirit.png) -263px -143px;
+}
+.page a,.page span{
+	float: left;
+	margin:0 4px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	display: inline-block;
+	z-index: 100;
+}
+.page .active{
+	background: #9dd8b1;
+	color: #fff;
+	padding:0 6px;	
+}
+.lesson-left{
+	width: 970px;
+}
+.m-video{
+	width: 223px;
+	height: 229px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 1px #e6e6e6;
+}
+.m-video h4{
+	height: 55px;
+	padding-left: 20px;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font: normal 16px/55px 'Microsoft YaHei';
+}
+.m-video .title{
+	height: 32px;
+	padding:11px 0 0 20px;
+	font: 14px/32px 'Microsoft YaHei';
+}
+.trigger{
+	cursor: pointer;
+}
+.trigger .videobg{
+	margin-left: 20px;
+}
+.trigger .play{
+	position: relative;
+	top:-78px;
+	left:87px;
+}
+.m-video .popupvideo{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 100;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+.m-popuplog .popup{
+	position: absolute;
+	width: 388px;
+	height: 288px;
+	top:50%;
+	left: 50%;
+	margin:-144px 0 0 -193px;
+	background: #fff;
+	z-index: 90;
+}
+.m-popuplog .popup h3{
+	font:bold 18px/38px 'Microsoft YaHei';
+	color: #444;
+	margin:10px 30px;
+}
+.popup .form{
+	width: 293px;
+	height: 43px;
+	margin:0 0 30px 40px;
+	position: relative;
+}
+.form input{ display:block; width:293px; height:43px; background: #fafafa; border: 1px solid #dfdfdf; box-shadow:inset 1px 1px 2px 1px #f1f1f1; font:16px/43px 'Microsoft YaHei'; text-indent:10px; color:#000; }
+.form label{ position: absolute; top:10px; left:12px; font:16px/28px 'Microsoft YaHei'; color:#cccccc;}
+.popup button{ display:block; width:293px; height:46px; border:none; box-shadow:1px 1px  0 1px #d5e3da; margin:0 0 30px 40px; background:url(../images/spirit.png) no-repeat 0 -37px; }
+.popupvideo .popup{
+	width: 950px;
+	height: 620px;
+	background: #fff;
+	position: fixed;
+	left: 50%;
+	top:50%;
+	/* margin:-338px 0 0 -475px; */
+	margin-left: -475px;
+	margin-top: -310px;
+	z-index: 99;
+}
+.popup p{
+	margin:10px 0 0 30px;
+	font: bold 18px/18px 'Microsoft YaHei';
+}
+.popup video{
+	margin:0 30px;
+}
+.popup .close{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:10px;
+	right:10px;
+	background: url(../images/spirit.png) no-repeat -18px 0;
+	cursor: pointer;
+}
+.hot{
+	height: 56px;
+	padding-left: 20px;
+	margin-top: 20px;
+	background: #fff;
+	font:normal 16px/56px 'Microsoft YaHei';
+	color: #333;
+	border-bottom: 1px solid #eeeeee;
+}
+.m-list{
+	width: 223px;
+	height: 720px;
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 10;
+}
+.m-list .m-wrap2{
+	width: 223px;
+}
+.m-wrap2 li{
+	display: block;
+	height: 50px;
+	margin:20px;
+}
+.m-wrap2 div{
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	margin-right: 12px;
+}
+.m-wrap2 img{
+	height: 50px;
+	margin-left: -35px;
+}
+.m-wrap2 p{
+	width: 121px;
+	height: 14px;
+	font: 14px/14px 'Microsoft YaHei';
+	color: #333;
+	margin-bottom: 13px;
+}
+.m-wrap2 span{
+	font:12px/12px 'Microsoft YaHei';
+	padding-left: 16px;
+	border:none;
+	background: url(../images/spirit.png) no-repeat -35px -20px;
+}
+.g-ft{
+	background:#2c3339;
+}
+.copyright{
+	width:544px;
+	height: 170px;
+	padding-top: 90px;
+}
+.copyright div{
+	width: 154px;
+	height: 22px;
+	font-size: 22px;
+	padding-left: 80px;
+	margin-bottom: 23px;
+	color: #39a030;
+	background:url(../images/spirit.png) no-repeat -223px 0;
+}
+.g-ft p{
+	font-size: 12.5px;
+	color: #fff;
+	opacity: .6;
+	filter:alpha(opacity=60);
+}
+.g-ft .friendlink{
+	width: 210px;
+}
+.g-ft .friendlink, .g-ft .about, .g-ft .more{
+	padding-top: 66px;
+	font: 15px/30px 'Microsoft YaHei';
+}
+.g-ft a{
+	display: block;
+	color: #fff;
+	opacity: .6;
+	filter:alpha(opacity=60);
+}
+.g-ft .about, .g-ft .more{
+	width: 134px;
+}
+.weibo{
+	width: 60px;
+	height: 24px;
+	background:url(../images/spirit.png) no-repeat -160px -10px;
+}
+@media screen and (min-width:1205px){
+
+}
+@media screen and (max-width:1205px){
+	.wrap{
+		width: 960px;
+	}
+}
+.lesson-box:hover a{
+	display: block;
+}
+/* @media screen and (max-width:1250px){
+	.wrap{ width: 960px;}
+	
+	}
+
+@media screen and (min-width:1250px){
+	.wrap{ width: 1200px;}
+	} */
+	
+

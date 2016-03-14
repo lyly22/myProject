@@ -1,0 +1,76 @@
+/*内外边距通常让各个浏览器表现位置不同*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button{
+	margin:0;
+	padding:0;
+}
+/*表单元素并不继承父级font*/
+body,button,input,select,textarea{
+	font:12px '微软雅黑',arial,sans-serif;	
+}
+input,select,textarea{
+	font-size:100%;
+}
+ol,ul{
+	list-style: none;
+}
+/*去掉table cell边距并让其重合*/
+table{
+	border-collapse: collapse;
+	border-spacing:0;
+}
+/*ie bug:th不继承text-align*/
+th{
+	text-align:inherit;
+}
+/*去除默认边框*/
+fieldset,img{
+	border:none;
+}
+/*ie6 7 8显示为行内表现*/
+iframe{
+	display:block;
+}
+/*去掉列表默认样式*/
+ol,ul{
+	list-style:none;
+}
+/*去除默认链接显示下划线*/
+a{
+	text-decoration:none;
+	color: #666;
+}
+input{
+	outline:none;
+}
+i{
+	font-style:normal;
+}
+#guessyou ul{
+	height: 210px;
+	padding-top: 20px;
+	overflow: hidden;
+}
+#guessyou li{
+	width: 201px;
+	float: left;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+.clearfix{
+	/* overflow: hidden; */
+	zoom:1;
+}
+.clearfix:after{
+	display: block;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	clear:both;	
+}
+.f-toe{
+	overflow: hidden;
+	word-wrap:normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
