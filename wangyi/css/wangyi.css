@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-03-11 15:37:09
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-03-14 15:57:30
+* @Last Modified time: 2016-03-15 10:19:24
 */
 body{
 	color: #666;
@@ -491,24 +491,45 @@ strong{
 	height: 24px;
 	background:url(../images/spirit.png) no-repeat -160px -10px;
 }
-@media screen and (min-width:1205px){
-
-}
-@media screen and (max-width:1205px){
-	.wrap{
-		width: 960px;
-	}
-}
 .lesson-box:hover a{
 	display: block;
 }
-/* @media screen and (max-width:1250px){
+	
+
+@media screen and (max-width:1250px){
 	.wrap{ width: 960px;}
+	#banner a{ width:1364px; margin:0 auto;}
+	#banner a img{ margin:0 -144px;}
+	.item-box{ width:1065px;}
+	.items{ width:285px; margin:50px 35px 0;}
+	.workplace{width:1364px; overflow:hidden;}
+	.workplace div{ width:1616px; margin:0 -140px;}
+	.lesson{ width:980px; }
+	.lesson-left{ width:734px;}
+	.g-ft .about, .g-ft .more{width: 110px;}
 	
 	}
 
 @media screen and (min-width:1250px){
 	.wrap{ width: 1200px;}
-	} */
+	#banner a{ width:1616px; margin:0 auto;}
+	#banner a img{ margin:0 -18px;}
+	.item-box{width:1270px;}
+	.items{ width:339px; margin:50px 42px 0;}
+	.workplace{ width:1616px; margin:0 auto;}
+	.lesson{ width:1216px;}
+	.lesson-left{ width:970px;}
+	.g-ft .about, .g-ft .more{width: 134px;}
+	}
 	
-
+	
+@media \0screen{  
+	.wrap{ width: 1200px;}
+	#banner a{ width:1616px; margin:0 auto;}
+	#banner a img{ margin:0 -18px;}
+	.item-box{width:1270px;}
+	.items{ width:339px; margin:0 42px;}
+	.workplace{width:1616px; margin:0 auto;}
+	.lesson{ width:1216px;}
+	.lesson-left{ width:970px;}
+	}

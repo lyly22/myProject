@@ -6,7 +6,7 @@
 	<title>welcome</title>
 	<style>
 		body{
-			padding-left:30px;
+			padding-left:10px;
 			font:18px Arial,'微软雅黑';
 		}
 		.color0{
@@ -25,17 +25,28 @@
 			text-align:center;
 		}
 		p{
-			font-size:16px;
-		}
-		p a{
 			font-size:18px;
+		}
+		.jd,.wangyi{
+			position: absolute;
+			left:220px;
+			display:none;
+		}
+		.jd{
+			font-size:16px;
+			top:83px;
+		}
+		.wangyi{
+			top:130px;
 		}
 	</style>
 </head>
 <body>
-	<h2>Hi,I am Luying！welcome</h2><br />
-	<p><a href="http://lyly22.github.io/myProject/jingdong/index.html" target="_blank">京东首页 html+css+js</a></p>
-	<p><a href="http://lyly22.github.io/myProject/wangyi/wangyi.html" target="_blank">网易 html+css+js</a></p>
+	<img src="wangyi/images/jd.jpg" class="jd">
+	<img src="wangyi/images/text.jpg" class="wangyi">
+	<h2>Hi,I am Luying！welcome</h2>
+	<p><a href="http://lyly22.github.io/myProject/jingdong/index.html" target="_blank" id="jd">京东首页 html+css+js</a></p>
+	<p><a href="http://lyly22.github.io/myProject/wangyi/wangyi.html" target="_blank" id="wangyi">网易 html+css+js+ajax</a></p>
 	<p><a href="http://lyly22.github.io/myProject/TencentSport/index.html" target="_blank">腾讯体育ajax数据绑定</a></p>
 	<p><a href="http://lyly22.github.io/myProject/2048/index.html" target="_blank">2048游戏</a>（支持电脑键盘控制和手机触控，实现了不同手机尺寸的自适应）</p>
 	<p><a href="http://lyly22.github.io/myProject/ajaxWaterfall/index.html" target="_blank">ajax瀑布流</a></p>
@@ -57,10 +68,21 @@
 	<p><a href="http://lyly22.github.io/myProject/wordResume.html" target="_blank">京东首页 html+css+js</a></p> -->
 	<div class="code">扫描二维码访问<br /><br /><img src="其他/images/1453275732.png" height="100" width="100" alt=""></div>
 </body>
+<script src="wangyi/js/jquery-1.9.1.min.js"></script>
 <script>
 	var a=document.getElementsByTagName('a');
 	for(var i=0;i<a.length;i++){
 		a[i].className='color'+i%3;
 	}
+	$('#jd').hover(function(){
+		$('.jd').show();
+	},function(){
+		$('.jd').hide();
+	})
+	$('#wangyi').hover(function(){
+		$('.wangyi').show();
+	},function(){
+		$('.wangyi').hide();
+	})
 </script>
 </html>
